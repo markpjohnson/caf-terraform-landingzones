@@ -1,4 +1,9 @@
 terraform {
-    backend "azurerm" {
+  backend "remote" {
+    organization = "4Cloud"
+
+    workspaces {
+      name = "caf-alz"
     }
+  }
 }

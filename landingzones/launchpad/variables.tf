@@ -1,7 +1,7 @@
 variable launchpad_mode {
-  default = "launchpad_light"
-  type = string
-  
+  default = "launchpad"
+  type    = string
+
   validation {
     condition     = contains(["launchpad_light", "launchpad"], var.launchpad_mode)
     error_message = "Allowed values are launchpad_light or launchpad."
@@ -10,7 +10,7 @@ variable launchpad_mode {
 
 variable level {
   default = "level0"
-  type = string
+  type    = string
 
   validation {
     condition     = contains(["level0", "level1", "level2", "level3", "level4"], var.level)
@@ -19,7 +19,7 @@ variable level {
 }
 
 variable convention {
-  default = "cafrandom"
+  default = "cafclassic"
 
   validation {
     condition     = contains(["cafrandom", "random", "passthrough", "cafclassic"], var.convention)
@@ -28,7 +28,7 @@ variable convention {
 }
 
 variable location {
-  default = "southeastasia"
+  default = "northcentralus"
 }
 
 variable prefix {
@@ -44,7 +44,7 @@ variable tf_name {
 variable resource_groups {}
 
 variable storage_account_name {
-  type    = string
+  type = string
 }
 
 variable keyvaults {}

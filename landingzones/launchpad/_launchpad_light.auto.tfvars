@@ -8,7 +8,7 @@ launchpad_key_names = {
 resource_groups = {
   tfstate     = {
     name        = "launchpad-tfstates"
-    location    = "southeastasia"
+    location    = "northcentralus"
     useprefix   = true
     max_length  = 40
   }
@@ -31,8 +31,8 @@ keyvaults = {
   launchpad = {
     name                = "launchpad"
     resource_group_key  = "security"
-    region              = "southeastasia"
-    convention          = "cafrandom"
+    region              = "northcentralus"
+    convention          = "cafclassic"
     sku_name            = "standard"
   }
 }
@@ -47,7 +47,7 @@ subscriptions = {
 aad_apps =  {
   # Do not rename the key "launchpad" to be able to upgrade to the standard launchpad
   caf_launchpad_level0 = {
-    convention              = "cafrandom"
+    convention              = "cafclassic"
     useprefix               = true
     application_name        = "caf_launchpad_level0"
     password_expire_in_days = 180
